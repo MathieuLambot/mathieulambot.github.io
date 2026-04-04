@@ -48,7 +48,7 @@ img { max-width: 100%; display: block; }
 /* ── LAYOUT ── */
 .wiki-layout {
   display: grid;
-  grid-template-columns: 48px 1fr;
+  grid-template-columns: 160px 1fr;
   min-height: 100vh;
 }
 
@@ -63,46 +63,47 @@ img { max-width: 100%; display: block; }
   border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding: 24px 0;
-  gap: 10px;
+  gap: 4px;
   position: sticky;
   top: 0;
   height: 100vh;
   overflow: hidden;
+  width: 160px;
 }
 
 .sb-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  background: var(--border2);
-  display: block;
-  flex-shrink: 0;
-  transition: background .15s, transform .15s;
-  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  font-size: 12px;
+  color: var(--txt-dim);
+  text-decoration: none;
+  transition: color .15s, background .15s;
+  border-left: 2px solid transparent;
 }
 .sb-dot:hover, .sb-dot.active {
-  background: var(--fire);
-  transform: scale(1.35);
-  text-decoration: none;
-}
-.sb-dot[title]:hover::after {
-  content: attr(title);
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--surf3);
-  border: 1px solid var(--border2);
   color: var(--txt-bright);
-  font-family: var(--font);
-  font-size: 11px;
-  padding: 3px 8px;
+  background: var(--surf2);
+  border-left-color: var(--fire);
+  text-decoration: none;
+  transform: none;
+}
+.sb-dot::before {
+  content: '';
+  width: 8px;
+  height: 8px;
   border-radius: 2px;
-  white-space: nowrap;
-  z-index: 100;
-  pointer-events: none;
+  background: currentColor;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+.sb-dot.active::before, .sb-dot:hover::before {
+  opacity: 1;
+  background: var(--fire);
 }
 
 /* ── TYPOGRAPHY ── */
