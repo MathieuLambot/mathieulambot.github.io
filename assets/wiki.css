@@ -101,6 +101,12 @@ img { max-width: 100%; display: block; }
   display: inline-block;
 }
 
+.sb-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 16px;
+}
+
 /* ── TYPOGRAPHY ── */
 .wiki-title {
   font-size: 22px;
@@ -148,6 +154,12 @@ img { max-width: 100%; display: block; }
   height: 80px;
   object-fit: cover;
   border-radius: 4px;
+  flex-shrink: 0;
+}
+.hero-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--fire);
   flex-shrink: 0;
 }
 .hero-name {
@@ -227,6 +239,7 @@ img { max-width: 100%; display: block; }
 .nav-card.eventi { border-top-color: var(--ev-acc); }
 .nav-card.rare   { border-top-color: var(--rare-acc); }
 .nav-card.clan   { border-top-color: var(--clan-acc); }
+.nav-card.players{ border-top-color: var(--players); }
 .nav-card.bases  { border-top-color: #a78bfa; }
 .nav-card.fire   { border-top-color: var(--fire); }
 
@@ -358,8 +371,8 @@ img { max-width: 100%; display: block; }
 }
 .player-card:hover { border-color: var(--fire); text-decoration: none; }
 .player-card img {
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   image-rendering: pixelated;
   margin: 0 auto 8px;
   border-radius: 2px;
@@ -399,7 +412,8 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.04em;
 }
 .breadcrumb a { color: var(--fire); }
-.breadcrumb span { margin: 0 6px; color: var(--border2); }
+.breadcrumb span { margin: 0 4px; color: var(--border2); }
+.breadcrumb .current { margin-left: 0; color: var(--txt); }
 
 /* ── ENCHANT LIST ── */
 .enchant-list {
