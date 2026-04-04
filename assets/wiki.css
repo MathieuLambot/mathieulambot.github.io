@@ -104,12 +104,6 @@ img { max-width: 100%; display: block; }
   z-index: 100;
   pointer-events: none;
 }
-.sb-divider {
-  width: 20px;
-  height: 1px;
-  background: var(--border);
-  flex-shrink: 0;
-}
 
 /* ── TYPOGRAPHY ── */
 .wiki-title {
