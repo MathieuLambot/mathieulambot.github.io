@@ -90,20 +90,13 @@ img { max-width: 100%; display: block; }
   background: var(--surf2);
   border-left-color: var(--fire);
   text-decoration: none;
-  transform: none;
 }
-.sb-dot::before {
-  content: '';
+.sb-dot span {
   width: 8px;
   height: 8px;
   border-radius: 2px;
-  background: currentColor;
   flex-shrink: 0;
-  opacity: 0.5;
-}
-.sb-dot.active::before, .sb-dot:hover::before {
-  opacity: 1;
-  background: var(--fire);
+  display: inline-block;
 }
 
 /* ── TYPOGRAPHY ── */
